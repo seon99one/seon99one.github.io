@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction | Sunggon</title>
+    <link rel="stylesheet" href="intro_style.css" />
+</head>
+<body>
+    <!-- header -->
+    <header class="left-header">
+        <div class="home">
+            <a class="home-link" href="main.html">
+                <img src="./home-logo.png" alt="home-logo" width="55%"/>
+            </a>
+        </div>
+        <div class="home-gpt">ChatGPT
+        </div>
+    </header>
+
+    <!-- 메인 기본 이미지 -->
+    <section class="main-home">
+        <div class="main-logo">
+            <image src="./chatgpt-logo.webp" 
+            alt="chatgpt-logo" width="3%" />
+            <h2>김성곤에 대해 얼마나 알고 있나요?</h2>
+        </div>
+
+    <!-- 메인 버튼 4가지 -->
+    </section>
+    <section class="main-button">
+        <form action="" method="POST">
+            <fieldset style="border:0">
+                <button type="button" class="btn" id="btn_info" onclick="location.href='qy_info.html'">
+                    <b>김성곤의 기본정보를 확인해보세요</b>
+                    <br />
+                    <span style="color:grey">김성곤의 존재를 몰랐던 사람들을 위하여</span>
+                </button>
+
+                <button type="button" class="btn" id="btn_favorite" onclick="location.href='qy_favorite.html'">
+                    <b>김성곤이 좋아하는 것을 확인해보세요</b>
+                    <br />
+                    <span style="color:grey">음식, 유튜버, 동네 등에 대해서</span>
+                </button>
+
+                <br />
+
+                <button type="button" class="btn" id="btn_hobby" onclick="location.href='qy_hobby.html'">
+                    <b>김성곤의 취미를 확인해보세요</b>
+                    <br />
+                    <span style="color:grey">최근에 가진 취미부터 갖고 싶어하는 취미까지</span>
+                </button>
+
+                <button type="button" class="btn" id="btn_experience" onclick="location.href='qy_experience.html'">
+                    <b>김성곤의 특별한 경험에 대해 확인해보세요</b>
+                    <br />
+                    <span style="color:grey">많은 사람들이 해보지 못한 경험에 대해서</span>
+                </button>
+            </fieldset>
+        </form>
+    </section>
+    
+    <!-- 하단 채팅 박스 -->
+    <section class="main-chat">
+        <div class="chat-container">
+            <input type="text" class="chatbox" placeholder="위의 항목을 클릭해보세요." />
+            <button class="send-btn" onclick="location.href='main.html'">⬆️</button>
+        </div>
+    </section>
+</body>
+</html>
