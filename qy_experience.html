@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Sunggon</title>
+    <link rel="stylesheet" href="content_style.css" />
+</head>
+<body>
+     <!-- header -->
+     <header class="left-header">
+        <div class="home">
+            <a class="home-link" href="main.html">
+                <img src="./home-logo.png" alt="home-logo" width="55%"/>
+            </a>
+        </div>
+        <div class="home-gpt">ChatGPT
+        </div>
+    </header>
+    <!-- 센터 프레젠테이션 -->
+    <section class="center-container">
+        <!-- 질문 컨테이너 -->
+        <div class="q-container">
+            <!-- 질문자 정보 -->
+            <div class="user">
+                <div class="profile" id="user_pf">
+                    <img src="./user-profile.png" alt="user-profile" width="25px" />
+                </div>
+                <div class="name" id="user_name">
+                    <b>Like Lion</b>
+                </div>
+            </div>
+            <!-- 질문 내용 -->
+            <div class="question" id="q_info">
+                <p class="paragraph">
+                    김성곤이 한 특별한 경험에 대해 알려줘.
+                </p>
+            </div>
+        </div>
+        <!-- 답변 컨테이너 -->
+        <div class="a-container">
+            <!-- 답변자 정보 -->
+            <div class="gpt">
+                <div class="profile" id="gpt_pf">
+                    <img src="./gpt-profile.png" alt="gpt-profile" width="25px" />
+                </div>
+                <div class="name" id="gpt_name">
+                    <b>ChatGPT</b>
+                </div>
+            </div>
+            <!-- 답변 내용 -->
+            <div class="answer" id="a_info">
+                <p class="paragraph" id="typewriter"></p>
+                <img src="img-fuji.jpg" id="img-fuji" alt="fujiimage" width="70%" />
+            <script src="./ty-experience.js"></script>    
+            </div>
+        </div>
+    </section>
+    <!-- 하단 채팅 박스-->
+    <section class="main-chat">
+        <div class="chat-container">
+            <input type="text" class="chatbox" placeholder="우측의 버튼을 클릭해 돌아가세요." />
+            <button class="send-btn" onclick="location.href='main.html'">⬆️</button>
+        </div>
+    </section>
+</body>
+</html>

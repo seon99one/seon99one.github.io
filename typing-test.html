@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>타이핑 효과</title>
+<style>
+  .typewriter {
+    white-space: pre-line;
+    overflow: hidden;
+    font-family: monospace;
+    border-right: .1em solid;
+  }
+</style>
+</head>
+<body>
+<div id="output"></div>
+
+<script>
+  const texts = [
+    { type: 'p', content: '안녕하세요. 첫 번째 요소 타이핑 효과입니다.' },
+    { type: 'ol', content: ['첫 번째 항목'] },
+    { type: 'ol', content: ['두 번째 항목'] },
+    { type: 'p', content: '두 번째 요소도 타이핑되어 나타납니다.' },
+    { type: 'ol', content: ['네 번째 항목', '다섯 번째 항목', '여섯 번째 항목'] },
+    { type: 'p', content: '세 번째 요소는 이렇게 타이핑됩니다.' }
+  ];
+  let index = 0;
+  let charIndex = 0;
+  const speed = 100; // 타이핑 속도 (밀리초)
+
+  function typeWriter() {
+    if (index < texts.length) {
+      const currentText = texts[index];
+      if (currentText.type === 'p') {
+        typeParagraph(currentText.content);
+      } else if (currentText.type === 'ol') {
+        typeList(currentText.content);
+      }
+    }
+  }
+
+  function typeParagraph(text) {
+    const element = document.createElement('p');
+    element.classList.add('typewriter');
+    document.getElementById('output').appendChild(element);
+
+    function typeChar() {
+      if (charIndex < text.length) {
+        element.textContent += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeChar, speed);
+      } else {
+        charIndex = 0;
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    typeChar();
+  }
+
+  function typeList(listItems) {
+    const element = document.createElement('ol');
+    element.classList.add('typewriter');
+    document.getElementById('output').appendChild(element);
+
+    for (let i = 0; i < listItems.length; i++) {
+      const listItem = document.createElement('li');
+      element.appendChild(listItem);
+
+      const listItemText = listItems[i];
+      let listItemIndex = 0;
+
+      function typeListItem() {
+        if (listItemIndex < listItemText.length) {
+          listItem.textContent += listItemText.charAt(listItemIndex);
+          listItemIndex++;
+          setTimeout(typeListItem, speed);
+        }
+      }
+
+      typeListItem();
+    }
+
+    index++;
+    setTimeout(typeWriter, speed);
+  }
+
+  typeWriter();
+</script>
+</body>
+</html>
